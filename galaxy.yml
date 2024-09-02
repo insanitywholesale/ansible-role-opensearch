@@ -1,0 +1,18 @@
+namespace: insanitywholesale
+name: opensearch
+version: 2.16.0
+readme: README.md
+authors:
+  - insanitywholesale <popomastor@gmail.com>
+description: Roles for installing and configuring opensearch and opensearch dashboards
+license_file: LICENSE.txt
+tags:
+  - opensearch
+  - dashboards
+  - elasticsearch
+  - logstash
+  - kibana
+repository: https://github.com/insanitywholesale/ansible-role-opensearch
+documentation: https://opensearch.org/docs/latest/
+homepage: https://opensearch.org/docs/latest/
+issues: https://github.com/insanitywholesale/ansible-role-opensearch/issues
