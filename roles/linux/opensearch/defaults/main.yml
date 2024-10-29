@@ -1,14 +1,14 @@
 ---
 
 os_nodes: |-
-        {% for item in groups['os_cluster'] -%}
-          {{ item }}{% if not loop.last %}","{% endif %}
-        {%- endfor %}
+  {% for item in groups['os_cluster'] -%}
+    {{ item }}{% if not loop.last %}","{% endif %}
+  {%- endfor %}
 
 os_master_nodes: |-
-        {% for item in groups['master'] -%}
-          {{ item }}{% if not loop.last %}","{% endif %}
-        {%- endfor %}
+  {% for item in groups['master'] -%}
+    {{ item }}{% if not loop.last %}","{% endif %}
+  {%- endfor %}
 
 populate_inventory_to_hosts_file: true
 

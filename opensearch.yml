@@ -1,5 +1,4 @@
 ---
-
 - name: Opensearch installation & configuration
   hosts: os_cluster
   gather_facts: true

@@ -1,8 +1,7 @@
 ---
 _meta:
-  type: "roles"
+  type: roles
   config_version: 2
-
 
 indexes_full_access:
   reserved: false
@@ -12,42 +11,42 @@ indexes_full_access:
       allowed_actions:
         - "*"
   tenant_permissions:
-  - tenant_patterns:
-    - "*"
-    allowed_actions:
-    - "kibana_all_write"
+    - tenant_patterns:
+        - "*"
+      allowed_actions:
+        - kibana_all_write
 # ----------------------------------------------------
 indexes_security_search_full_access:
   reserved: true
   index_permissions:
     - index_patterns:
-        - "kube-apiserver-audit-*"
-        - "syslog-*"
+        - kube-apiserver-audit-*
+        - syslog-*
       allowed_actions:
-        - "indices:data/read/search*"
-        - "read"
-        - "view_index_metadata"
+        - indices:data/read/search*
+        - read
+        - view_index_metadata
   tenant_permissions:
-  - tenant_patterns:
-    - "SECURITY"
-    allowed_actions:
-    - "kibana_all_write"
+    - tenant_patterns:
+        - SECURITY
+      allowed_actions:
+        - kibana_all_write
 # ----------------------------------------------------
 indexes_web_search_full_access:
   reserved: true
   index_permissions:
     - index_patterns:
-        - "ingress-nginx-*"
-        - "mywebapp-*"
+        - ingress-nginx-*
+        - mywebapp-*
       allowed_actions:
-        - "indices:data/read/search*"
-        - "read"
-        - "view_index_metadata"
+        - indices:data/read/search*
+        - read
+        - view_index_metadata
   tenant_permissions:
-  - tenant_patterns:
-    - "WEB"
-    allowed_actions:
-    - "kibana_all_write"
+    - tenant_patterns:
+        - WEB
+      allowed_actions:
+        - kibana_all_write
 # ----------------------------------------------------
 # Restrict users so they can only view visualization and dashboard on OpenSearchDashboards
 kibana_read_only:
